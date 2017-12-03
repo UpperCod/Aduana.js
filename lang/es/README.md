@@ -8,7 +8,7 @@ la api de aduana es simple, ud podrá construir funciones para sanear o filtrar 
 
 - **filter** : permite crear funciones de saneamiento o filtrado, esta retorna una nueva función.
 
-- **schema** : permite iterar sobre un objeto, retornando una nueva función, está a su vez construye un proceso que espera que cada elemento del árbol sea completado, de esta forma ud podrá generar esperas sincronas y asincronas.
+- **schema** : permite iterar sobre un objeto, retornando una nueva función, está a su vez construye un proceso que espera a que cada elemento del árbol sea completado, de esta forma ud podrá generar esperas sincronas y asincronas.
 
 ### Input
 
@@ -18,7 +18,7 @@ al momento de ejecutar la función **filter** como **schema**, deberá entregar 
 
 - **valid** : función a ejecutar por **filter** o **schema** al finalizar sin rechazar ningún valor.
 
-- **valid** : función a ejecutar por **filter** o **schema** al finalizar rechazando algún valor.
+- **invalid** : función a ejecutar por **filter** o **schema** al finalizar rechazando algún valor.
 
 ### Crear filtro
 
@@ -43,7 +43,7 @@ isPepe({
    valid(value){
        console.log(value)
    },
-   invalide(value){
+   invalid(value){
        console.log(value)
    }
 })
